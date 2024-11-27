@@ -4,14 +4,61 @@
     border: 0;
 }
 
+body {
+    background-color: #641835;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20vh;
+}
+
+body {
+    height: 80vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .grimoire-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .grimoire-button {
-    height: 40%;
-    width: 40%;
+    height: 560px;
+    width: 560px;
+}
+
+.magic-ball-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 150px;
+    width: 162px;
+    background-image: url(boulemagiquepetite.png);
+}
+
+.magic-ball-image {
+    height: 100%;
+}
+
+.magic-ball-input {
+    background: none;
+    color: white;
+    border: solid 1px salmon;
 }
