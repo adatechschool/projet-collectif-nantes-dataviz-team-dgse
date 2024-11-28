@@ -30,16 +30,6 @@ main {
     height: 100%;
 }
 
-.grimoire-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1120px;
-    height: 560px;
-    background-image: url(grimoire_ouvert.jpg);
-    background-size: 1120px 560px;
-}
-
 .magic-ball-container {
     display: flex;
     flex-direction: row-reverse;
@@ -59,3 +49,41 @@ main {
     border: solid 1px salmon;
 }
 
+.grimoire-container {
+    display: flex;
+    flex-direction: row;
+    width: 1120px;
+    height: 560px;
+    background-image: url(grimoire_ouvert.jpg);
+    background-size: 1120px 560px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.card-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    height: 260px;
+    width: 146px;
+}
