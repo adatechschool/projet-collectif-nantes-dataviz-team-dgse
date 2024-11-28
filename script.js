@@ -47,7 +47,7 @@ async function getCardsList(){
     console.log("cardList",cardsList)
 }
 
-function displayCardList(myList,myPage) {
+function displayCardList(myList, myPage) {
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
     
@@ -56,15 +56,39 @@ function displayCardList(myList,myPage) {
     myPage = myPage * 12
     for (i = myPage; i < myPage + 6; i++){
         if (i < cardsList.length){
-            leftSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
-                                <div>${myList[i].name}<div/><div/><br>`
+            const cardSmall = document.createElement("div")
+            cardSmall.classList.add("card-small")
+            leftSection.appendChild(cardSmall)
+            const button = document.createElement("button")
+            button.addEventListener("click", ()=> {
+                displayCard(myList[i].id)
+            })
+            cardSmall.appendChild(button)
+            const imageCard = document.createElement("img")
+            imageCard.src = myList[i].image_uris.small
+            button.appendChild(imageCard)
+            const nameCard = document.createElement("p")
+            nameCard.innerText = myList[i].name
+            cardSmall.appendChild(nameCard)  
         } 
     }
 
     for (i = myPage + 6; i < myPage + 12; i++){
         if (i < cardsList.length){
-            rightSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
-                                <div>${myList[i].name}<div/><div/><br>`
+            const cardSmall = document.createElement("div")
+            cardSmall.classList.add("card-small")
+            rightSection.appendChild(cardSmall)
+            const button = document.createElement("button")
+            button.addEventListener("click", ()=> {
+                displayCard(myList[i].id)
+            })
+            cardSmall.appendChild(button)
+            const imageCard = document.createElement("img")
+            imageCard.src = myList[i].image_uris.small
+            button.appendChild(imageCard)
+            const nameCard = document.createElement("p")
+            nameCard.innerText = myList[i].name
+            cardSmall.appendChild(nameCard)
         }
     }
 }
@@ -88,17 +112,11 @@ function disableNavButton(){
 
 chooseSet()
 
-
-
-
-
-
-
-
-
-
 //appeler les infos d'une carte
 async function displayCard(info) {
+    leftSection.innerHTML = ""
+    rightSection.innerHTML = ""
+
     try {
         const response = await fetch(`https://api.scryfall.com/cards/${info}`);
         const infoCard = await response.json();
