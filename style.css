@@ -39,14 +39,9 @@ main {
     background-image: url(boulemagiquepetite.png);
 }
 
-.magic-ball-image {
-    height: 100%;
-}
-
 .magic-ball-input {
     background: none;
     color: white;
-    border: solid 1px salmon;
 }
 
 .grimoire-container {
