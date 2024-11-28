@@ -1,11 +1,5 @@
 const grimoireImage = document.querySelector(".grimoire-image")
 
-<<<<<<< HEAD
-//////////Maison de Grace
-//
-///////////////////////
-
-const leftSection = document.querySelector(".left-section")
 
 async function getCardsList(){
     const response = await fetch("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints")
@@ -38,7 +32,6 @@ game()
 
 
 
-=======
 grimoireButton.addEventListener('click', ()=>{ //ouvre notre grimoire
     grimoireButton.classList.add("open")
     grimoireImage.src = "grimoire_ouvert.jpg"
@@ -67,4 +60,3 @@ async function displayCard(info) {
 }
 
 displayCard('df6317b0-15fd-4924-9302-41bed2354546');
->>>>>>> carte_seule
