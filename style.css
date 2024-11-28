@@ -92,5 +92,14 @@ main {
     align-items: center;
     height : 90%;
     width: 75%;
+}
 
+.card-normal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left; 
+    height : 85%;
+    width: 94%;
+    font-size: 15px;
 }
