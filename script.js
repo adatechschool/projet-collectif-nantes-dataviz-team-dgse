@@ -1,5 +1,6 @@
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
+const rightSection = document.querySelector(".right-section")
 
 
 async function game() {
@@ -19,6 +20,11 @@ console.log(myList.data[0].name)
 console.log(myList.data[0].image_uris.small)
 for (i = 0; i < 6; i++){
     leftSection.innerHTML += `<div class="card-small"><img src="${myList.data[i].image_uris.small}">
+                             <div>${myList.data[i].name}<div/><div/><br>`
+}
+
+for (i = 0; i < 6; i++){
+    rightSection.innerHTML += `<div class="card-small"><img src="${myList.data[i].image_uris.small}">
                              <div>${myList.data[i].name}<div/><div/><br>`
 }
 }
