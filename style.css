@@ -34,17 +34,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.grimoire-button {
+    width: 1120px;
     height: 560px;
-    width: 560px;
-    transition: all 0.08s;
-    &.open{
-        width: 1120px;
-    }
+    background-image: url(grimoire_ouvert.jpg);
+    background-size: 1120px 560px;
 }
 
 .magic-ball-container {
@@ -65,3 +58,4 @@ main {
     color: white;
     border: solid 1px salmon;
 }
+
