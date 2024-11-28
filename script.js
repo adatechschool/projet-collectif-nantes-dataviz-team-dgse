@@ -51,18 +51,38 @@ function displayCardList(myList,myPage) {
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
     
-    console.log(myList[0].name)
-    console.log(myList[0].image_uris.small)
-    
-    myPage = myPage * 6
+    disableNavButton()
+
+    myPage = myPage * 12
     for (i = myPage; i < myPage + 6; i++){
-        leftSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
+        if (i < cardsList.length){
+            leftSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
                                 <div>${myList[i].name}<div/><div/><br>`
+        } 
     }
 
     for (i = myPage + 6; i < myPage + 12; i++){
-        rightSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
+        if (i < cardsList.length){
+            rightSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
                                 <div>${myList[i].name}<div/><div/><br>`
+        }
+    }
+}
+
+function disableNavButton(){
+    
+    if (indexPage > cardsList.length/12 - 1){
+        nextPageButton.disabled = true
+    }
+    else{
+        nextPageButton.disabled = false
+    }
+
+    if (indexPage < 1){
+        previousPageButton.disabled = true
+    }
+    else{
+        previousPageButton.disabled = false
     }
 }
 
