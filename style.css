@@ -84,3 +84,13 @@ main {
     height: 260px;
     width: 146px;
 }
+
+.card-normal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height : 90%;
+    width: 75%;
+
+}

@@ -125,12 +125,18 @@ async function displayCard(id) {
         //console.log(infoCard.image_uris.large);
    
         const imgContainer = document.createElement("img");
-        imgContainer.src = infoCard.image_uris.normal; 
+        
+        imgContainer.src = infoCard.image_uris.normal;
         imgContainer.alt = infoCard.name 
         
+        
+        imgContainer.classList.add("card-normal")
         leftSection.appendChild(imgContainer);
+        
 
         const dataContainer = document.createElement("p");
+        dataContainer.innerHTML +=`<article><h2>${item.sign}</h2><p>${item.description}</p></article>`;
+
 
     } catch (error) {
         console.error("Carte non trouvée", error);
