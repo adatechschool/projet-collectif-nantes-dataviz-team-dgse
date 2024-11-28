@@ -1,7 +1,13 @@
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
 const rightSection = document.querySelector(".right-section")
+const nextPageButton = document.querySelector(".next-page-button")
 
+let cardsList = [] 
+
+nextPageButton.addEventListener("click", ()=> {
+    
+})
 
 async function game() {
     const cardList = await getCardsList()
@@ -9,27 +15,53 @@ async function game() {
 }
 
 async function getCardsList(){
-    const response = await fetch("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints")
-    const json = await response.json()
-    console.log(json)
-    return json
+    let url = "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints"
+    let i = 0
+    let response
+    let json
+    
+    do {
+        response = await fetch(url)
+        json = await response.json()
+        
+        for (card of json.data){
+            cardsList.push(card)
+        }
+
+        console.log("json.data",json.data)
+        i ++
+
+        if (json.has_more){
+            url = json.next_page
+        }
+    } while (json.has_more && i < 10)
+    
+    console.log("cardList",cardsList)
+    return cardsList
 }
 
 function displayCardList(myList) {
-console.log(myList.data[0].name)
-console.log(myList.data[0].image_uris.small)
-for (i = 0; i < 6; i++){
-    leftSection.innerHTML += `<div class="card-small"><img src="${myList.data[i].image_uris.small}">
-                             <div>${myList.data[i].name}<div/><div/><br>`
-}
+    console.log(myList[0].name)
+    console.log(myList[0].image_uris.small)
+    for (i = 0; i < 6; i++){
+        leftSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
+                                <div>${myList[i].name}<div/><div/><br>`
+    }
 
-for (i = 0; i < 6; i++){
-    rightSection.innerHTML += `<div class="card-small"><img src="${myList.data[i].image_uris.small}">
-                             <div>${myList.data[i].name}<div/><div/><br>`
-}
+    for (i = 6; i < 12; i++){
+        rightSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
+                                <div>${myList[i].name}<div/><div/><br>`
+    }
 }
 
 game()
+
+
+
+
+
+
+
 
 
 
