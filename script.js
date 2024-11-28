@@ -1,5 +1,11 @@
 const grimoireImage = document.querySelector(".grimoire-image")
+const leftSection = document.querySelector(".left-section")
 
+
+async function game() {
+    const cardList = await getCardsList()
+    displayCardList(cardList)
+}
 
 async function getCardsList(){
     const response = await fetch("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints")
@@ -8,12 +14,7 @@ async function getCardsList(){
     return json
 }
 
-async function game() {
-const cardList = await getCardsList()
-displayCard(cardList)
-}
-
-function displayCard(myList) {
+function displayCardList(myList) {
 console.log(myList.data[0].name)
 console.log(myList.data[0].image_uris.small)
 for (i = 0; i < 6; i++){
@@ -22,10 +23,10 @@ for (i = 0; i < 6; i++){
 }
 }
 
+game()
 
 
 
-const leftSection = document.querySelector(".left-section")
 //appeler les infos d'une carte
 async function displayCard(info) {
     try {
@@ -46,5 +47,3 @@ async function displayCard(info) {
         console.error("Carte non trouvée", error);
     }
 }
-
-displayCard('df6317b0-15fd-4924-9302-41bed2354546');
