@@ -2,16 +2,24 @@ const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
 const rightSection = document.querySelector(".right-section")
 const nextPageButton = document.querySelector(".next-page-button")
+const previousPageButton = document.querySelector(".previous-page-button")
 
-let cardsList = [] 
+let cardsList = []
+let indexPage = 0
+
 
 nextPageButton.addEventListener("click", ()=> {
-    
+    indexPage ++
+    displayCardList(cardsList,indexPage)
+})
+previousPageButton.addEventListener("click", ()=> {
+    indexPage --
+    displayCardList(cardsList,indexPage)
 })
 
-async function game() {
-    const cardList = await getCardsList()
-    displayCardList(cardList)
+async function chooseSet() {
+    await getCardsList()
+    displayCardList(cardsList,indexPage)
 }
 
 async function getCardsList(){
@@ -37,24 +45,28 @@ async function getCardsList(){
     } while (json.has_more && i < 10)
     
     console.log("cardList",cardsList)
-    return cardsList
 }
 
-function displayCardList(myList) {
+function displayCardList(myList,myPage) {
+    leftSection.innerHTML = ""
+    rightSection.innerHTML = ""
+    
     console.log(myList[0].name)
     console.log(myList[0].image_uris.small)
-    for (i = 0; i < 6; i++){
+    
+    myPage = myPage * 6
+    for (i = myPage; i < myPage + 6; i++){
         leftSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
                                 <div>${myList[i].name}<div/><div/><br>`
     }
 
-    for (i = 6; i < 12; i++){
+    for (i = myPage + 6; i < myPage + 12; i++){
         rightSection.innerHTML += `<div class="card-small"><img src="${myList[i].image_uris.small}">
                                 <div>${myList[i].name}<div/><div/><br>`
     }
 }
 
-game()
+chooseSet()
 
 
 
