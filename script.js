@@ -4,15 +4,15 @@ const rightSection = document.querySelector(".right-section")
 const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
 
-let cardsList = []
-let indexPage = 0
+let cardsList = [] //liste des cartes à afficher
+let indexPage = 0 //index de la page sur laquelle on est
 
 
-nextPageButton.addEventListener("click", ()=> {
+nextPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenements "clique" sur bouton suivant
     indexPage ++
     displayCardList(cardsList,indexPage)
 })
-previousPageButton.addEventListener("click", ()=> {
+previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenements "clique" sur bouton précédent
     indexPage --
     displayCardList(cardsList,indexPage)
 })
@@ -32,22 +32,22 @@ async function getCardsList(){
         response = await fetch(url)
         json = await response.json()
         
-        for (card of json.data){
-            cardsList.push(card)
+        for (card of json.data){ //pour chaque carte dans la liste de cartes
+            cardsList.push(card) //ajoute la carte dans le tableau "cardsList"
         }
-
+ 
         console.log("json.data",json.data)
         i ++
 
-        if (json.has_more){
-            url = json.next_page
+        if (json.has_more){ //est ce qu'il y a une page en plus?
+            url = json.next_page //si oui change url pour celle de la page d'après
         }
     } while (json.has_more && i < 10)
     
     console.log("cardList",cardsList)
 }
 
-function displayCardList(myList, myPage) {
+function displayCardList(myList, myPage) { //affiche la liste de cartes
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
     
@@ -61,7 +61,7 @@ function displayCardList(myList, myPage) {
             leftSection.appendChild(cardSmall)
             const button = document.createElement("button")
             const id = myList[i].id
-            button.addEventListener("click", ()=> {
+            button.addEventListener("click", ()=> {// écoute si clique sur un bouton carte
                 displayCard(id)
             })
             cardSmall.appendChild(button)
@@ -130,7 +130,7 @@ async function displayCard(id) {
         imgContainer.src = infoCard.image_uris.normal;
         imgContainer.alt = infoCard.name 
         
-        
+          
         imgContainer.classList.add("card-normal")
         leftSection.appendChild(imgContainer);
         
