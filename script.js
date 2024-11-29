@@ -60,8 +60,9 @@ function displayCardList(myList, myPage) {
             cardSmall.classList.add("card-small")
             leftSection.appendChild(cardSmall)
             const button = document.createElement("button")
+            const id = myList[i].id
             button.addEventListener("click", ()=> {
-                displayCard(myList[i].id)
+                displayCard(id)
             })
             cardSmall.appendChild(button)
             const imageCard = document.createElement("img")
@@ -70,7 +71,7 @@ function displayCardList(myList, myPage) {
             const nameCard = document.createElement("p")
             nameCard.innerText = myList[i].name
             cardSmall.appendChild(nameCard)  
-        } 
+        }
     }
 
     for (i = myPage + 6; i < myPage + 12; i++){
@@ -79,8 +80,9 @@ function displayCardList(myList, myPage) {
             cardSmall.classList.add("card-small")
             rightSection.appendChild(cardSmall)
             const button = document.createElement("button")
+            const id = myList[i].id
             button.addEventListener("click", ()=> {
-                displayCard(myList[i].id)
+                displayCard(id)
             })
             cardSmall.appendChild(button)
             const imageCard = document.createElement("img")
@@ -113,12 +115,11 @@ function disableNavButton(){
 chooseSet()
 
 //appeler les infos d'une carte
-async function displayCard(info) {
+async function displayCard(id) {
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
-
     try {
-        const response = await fetch(`https://api.scryfall.com/cards/${info}`);
+        const response = await fetch(`https://api.scryfall.com/cards/${id}`);
         const infoCard = await response.json();
    
         //console.log(infoCard.image_uris.large);
