@@ -114,6 +114,7 @@ function disableNavButton(){
 
 chooseSet()
 
+
 //appeler les infos d'une carte
 async function displayCard(id) {
     leftSection.innerHTML = ""
