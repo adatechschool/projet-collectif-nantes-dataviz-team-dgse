@@ -139,3 +139,19 @@ main {
     width: 94%;
     font-size: 15px;
 }
+.next-page-button {
+    opacity :0.2;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 250px;
+    background-color: none;
+}
+.previous-page-button {
+    opacity :0.3;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 250px;
+    background-color: none;
+    
+
+}
