@@ -7,6 +7,7 @@ import { myBookmark, switchPage } from "./navButtons.mjs"
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
 const rightSection = document.querySelector(".right-section")
+const rightSectionhome = document.querySelector(".right-section-homepage")
 const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
 const openBookButton = document.querySelector('.openBook-button')
