@@ -2,12 +2,8 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: Matrixbold ;
 }
-
-body {
-    background-color: #641835;
-}
-
 header {
     display: flex;
     flex-direction: row;
@@ -43,13 +39,23 @@ main {
     color: white;
 }
 
+.homepage-button {
+    display: flex;
+    flex-direction: row;
+    background-image: url(grimoire\ \(2\).jpg);
+    height: 560px;
+    width: 560px;
+    background-size: 560px 560px;
+    border-radius: 8px;
+}
 .grimoire-container {
     display: flex;
     flex-direction: row;
     width: 1120px;
     height: 560px;
-    background-image: url(grimoire_ouvert.jpg);
+    background-image : url(grimoire_ouvert.jpg);
     background-size: 1120px 560px;
+    opacity: 0.92;
 }
 
 .left-section {
