@@ -1,5 +1,6 @@
-import { nextPageButton, previousPageButton, leftSection, rightSection } from "./script.mjs"
+import { leftSection, rightSection } from "./script.mjs"
 import { displayCard } from "./singleCard.mjs"
+import { disableNavButton } from "./navButtons.mjs"
 
 const cardsList = [] //liste des cartes à afficher
 
@@ -8,6 +9,8 @@ const indexPage = {
 }
 
 async function doCardsList(url) {
+    leftSection.classList.remove("left-section-set")
+    rightSection.classList.remove("right-section-set")
     await getCardsList(url)
     displayCardList(cardsList, indexPage.index)
 }
@@ -40,7 +43,7 @@ function displayCardList(myList, myPage) { //affiche la liste de cartes
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
     
-    disableNavButton() 
+    disableNavButton(cardsList.length) 
 
     myPage = myPage * 12
     for (let i = myPage; i < myPage + 6; i++){
@@ -81,23 +84,6 @@ function displayCardList(myList, myPage) { //affiche la liste de cartes
             nameCard.innerText = myList[i].name
             cardSmall.appendChild(nameCard)
         }
-    }
-}
-
-function disableNavButton(){
-    
-    if (indexPage.index > cardsList.length/12 - 1){
-        nextPageButton.disabled = true
-    }
-    else{
-        nextPageButton.disabled = false
-    }
-
-    if (indexPage.index < 1){
-        previousPageButton.disabled = true
-    }
-    else{
-        previousPageButton.disabled = false
     }
 }
 

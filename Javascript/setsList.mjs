@@ -36,7 +36,6 @@ function displaySetsList(myList, myPage){
             const iconSet = document.createElement("img")
             iconSet.classList.add("set-icon")
             iconSet.src = myList[i].icon_svg_uri
-            console.log(iconSet.src)
             button.appendChild(iconSet)
             const setName = document.createElement("p")
             setName.innerText = myList[i].name
