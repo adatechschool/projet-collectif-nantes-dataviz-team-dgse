@@ -1,4 +1,4 @@
-import { chooseSet, displayCardList, indexPage, cardsList } from "./cardsList.mjs"
+import { doCardsList, displayCardList, indexPage, cardsList } from "./cardsList.mjs"
 
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
