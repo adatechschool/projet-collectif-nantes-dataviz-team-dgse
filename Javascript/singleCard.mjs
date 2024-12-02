@@ -1,4 +1,4 @@
-import { leftSection, rightSection } from "./script.js";
+import { leftSection, rightSection } from "./script.mjs";
 
 //appeler les infos d'une carte
 async function displayCard(id) {

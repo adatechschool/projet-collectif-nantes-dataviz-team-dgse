@@ -1,4 +1,5 @@
 import { doCardsList, displayCardList, indexPage, cardsList } from "./cardsList.mjs"
+import { doSetsList } from "./setsList.mjs"
 
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
@@ -6,7 +7,11 @@ const rightSection = document.querySelector(".right-section")
 const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
 
-doCardsList("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Amid&unique=prints")
+// doCardsList("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Amid&unique=prints")
+
+leftSection.classList.add("left-section-set")
+rightSection.classList.add("right-section-set")
+doSetsList()
 
 nextPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenements "clique" sur bouton suivant
     indexPage.index ++

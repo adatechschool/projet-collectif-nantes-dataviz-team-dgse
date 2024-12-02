@@ -1,4 +1,4 @@
-import { nextPageButton, previousPageButton, leftSection, rightSection } from "./script.js"
+import { nextPageButton, previousPageButton, leftSection, rightSection } from "./script.mjs"
 import { displayCard } from "./singleCard.mjs"
 
 const cardsList = [] //liste des cartes à afficher
@@ -40,7 +40,7 @@ function displayCardList(myList, myPage) { //affiche la liste de cartes
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
     
-    disableNavButton()
+    disableNavButton() 
 
     myPage = myPage * 12
     for (let i = myPage; i < myPage + 6; i++){
@@ -102,5 +102,5 @@ function disableNavButton(){
 }
 
 export {
-    doCardsList, displayCardList, indexPage, cardsList
+    doCardsList, displayCardList, indexPage, cardsList, disableNavButton
 }
