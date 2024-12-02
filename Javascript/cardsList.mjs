@@ -7,7 +7,7 @@ const indexPage = {
     index : 0  //index de la page sur laquelle on est
 }
 
-async function chooseSet() {
+async function doCardsList() {
     await getCardsList()
     displayCardList(cardsList, indexPage.index)
 }
@@ -103,5 +103,5 @@ function disableNavButton(){
 }
 
 export {
-    chooseSet, displayCardList, indexPage, cardsList
+    doCardsList, displayCardList, indexPage, cardsList
 }
