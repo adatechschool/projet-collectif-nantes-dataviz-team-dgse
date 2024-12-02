@@ -13,7 +13,7 @@ const grimoireContainer = document.querySelector('.grimoire-container')
 
 homePageButton.addEventListener("click", ()=>
     {
-    grimoireContainer.style.display = 'inline-block';
+    grimoireContainer.style.display = 'flex';
     homePageButton.style.display = 'none'
     nextPageButton.style.display = "none"
     previousPageButton.style.display = "none" 
