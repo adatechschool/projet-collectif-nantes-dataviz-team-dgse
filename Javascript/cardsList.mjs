@@ -1,4 +1,4 @@
-import { leftSection, rightSection, searchInput, } from "./script.mjs"
+import { nextPageButton, previousPageButton, leftSection, rightSection } from "./script.mjs"
 import { displayCard } from "./singleCard.mjs"
 import { disableNavButton } from "./navButtons.mjs"
 import { myBookmark } from "./navButtons.mjs"
