@@ -43,6 +43,4 @@ previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'év
 
 export {
     grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,homePageButton, grimoireContainer
-}
-    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton
-}   
+} 
