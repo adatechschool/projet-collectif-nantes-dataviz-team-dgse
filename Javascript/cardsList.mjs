@@ -7,13 +7,12 @@ const indexPage = {
     index : 0  //index de la page sur laquelle on est
 }
 
-async function doCardsList() {
-    await getCardsList()
+async function doCardsList(url) {
+    await getCardsList(url)
     displayCardList(cardsList, indexPage.index)
 }
 
-async function getCardsList(){
-    let url = "https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints"
+async function getCardsList(url){
     let i = 0
     let response
     let json
