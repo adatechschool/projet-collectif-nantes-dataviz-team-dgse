@@ -8,10 +8,10 @@ const indexPage = {
     index : 0  //index de la page sur laquelle on est
 }
 
-async function doCardsList(url) {
+async function doCardsList(urlurl) {
     leftSection.classList.remove("left-section-set")
     rightSection.classList.remove("right-section-set")
-    await getCardsList(url)
+    await getCardsList(urlurl)
     displayCardList(cardsList, indexPage.index)
 }
 
