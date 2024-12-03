@@ -157,19 +157,20 @@ main {
 }
 
 .next-page-button {
-    opacity :0.3;
     border-radius: 10px;
-    height: 50px;
+    height: 132px;
     margin-top: 250px;
-    background-color: none;
+    background: none;
+    width:50px;
+    image:url('key.png'); /*chemin vers image*/
 }
 
 .previous-page-button {
-    opacity :0.3;
     border-radius: 10px;
-    height: 50px;
+    height: 132px;
     margin-top: 250px;
-    background-color: none;
+    background: none;
+    width:50px;
 }
 
 .set-container {
@@ -187,4 +188,7 @@ main {
 .set-icon {
     width: 25px;
     height: 25px;
+    background: none;
+    width:50px;
+
 }
