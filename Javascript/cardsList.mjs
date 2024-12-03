@@ -1,22 +1,21 @@
 import { leftSection, rightSection, searchInput, } from "./script.mjs"
 import { displayCard } from "./singleCard.mjs"
 import { disableNavButton } from "./navButtons.mjs"
+import { myBookmark } from "./navButtons.mjs"
 
 const cardsList = [] //liste des cartes à afficher
 
-
-const indexPage = {
-    index : 0  //index de la page sur laquelle on est
-}
-
-async function doCardsList(urlurl) {
+async function doCardsList(url) {
+    myBookmark.chapter = "cards"
     leftSection.classList.remove("left-section-set")
     rightSection.classList.remove("right-section-set")
-    await getCardsList(urlurl)
-    displayCardList(cardsList, indexPage.index)
+    await getCardsList(url)
+    displayCardList(cardsList, 0)
 }
 
 async function getCardsList(url){
+    cardsList.length = 0 //efface le contenu de la liste
+
     let i = 0
     let response
     let json
@@ -89,5 +88,5 @@ function displayCardList(myList, myPage) { //affiche la liste de cartes
 }
 
 export {
-    doCardsList, displayCardList, indexPage, cardsList, disableNavButton
+    doCardsList, displayCardList, cardsList, disableNavButton
 }
