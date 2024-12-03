@@ -7,6 +7,12 @@ const rightSection = document.querySelector(".right-section")
 const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
 const randomButton = document.querySelector(".random-button")
+const setButton = document.querySelector(".set-button")
+const rareButton = document.querySelector(".rare-button")
+const colorButton = document.querySelector(".color-button")
+const setTypeButton = document.querySelector(".set-type-button")
+const authorButton = document.querySelector(".author-button")
+const homeButton = document.querySelector(".home-button")
 
 doCardsList("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints")
 

@@ -155,19 +155,96 @@ main {
 }
 
 .buttons-left {
-    margin-top: 132px;
+    margin-top: 81px;
     display: flex;
     flex-direction: row;
     gap: 30px;
-    width: 41%;
+    width: 10%;
     justify-content: flex-end;
 }
 
 .buttons-right {
-    margin-top: 132px;
+    margin-top: 81px;
     display: flex;
     flex-direction: row;
     gap: 30px;
     width: 4%;
     justify-content: flex-end;
+}
+
+.home-button-container {
+    margin-top: 81px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 16%;
+    justify-content: flex-end; 
+}
+
+.home-button {
+    width: 120px;
+    height: 90px;
+    border: none;
+    background-color: transparent;
+}
+
+.home-button:active {
+    filter : brightness(90%);
+}
+
+.button-home-image {
+    width: 120px;
+    height: 90px;
+    display: block;
+}
+
+.colors-button {
+    width: 100px;
+    height: 90px;
+    border: none;
+    background-color: transparent;
+}
+
+.button-colors-image {
+    width: 100px;
+    height: 90px;
+    display: block;
+}
+
+.colors-button:active {
+    filter : brightness(90%);
+}
+
+.random-button {
+    width: 100px;
+    height: 90px;
+    border: none;
+    background-color: transparent;
+}
+
+.random-button-image {
+    width: 100px;
+    height: 90px;
+    display: block;
+}
+
+.random-button:active {
+    filter : brightness(90%);
+}
+
+.set-button {
+    width: 70px;
+    height: 100px;
+    border: none;
+    background-color: transparent;
+}
+
+.set-button-image {
+    width: 70px;
+    height: 100px;
+    display: block;
+}
+
+.set-button:active {
+    filter : brightness(90%);
 }
