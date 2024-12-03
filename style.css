@@ -39,7 +39,7 @@ main {
     color: white;
 }
 
-.homepage-button {
+.openBook-button {
     display: flex;
     flex-direction: row;
     background-image: url(grimoire\ \(2\).jpg);
