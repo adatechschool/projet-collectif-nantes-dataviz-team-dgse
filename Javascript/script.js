@@ -7,7 +7,7 @@ const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
 const openBookButton = document.querySelector('.openBook-button')
 const grimoireContainer = document.querySelector('.grimoire-container')
-// const searchinput = document.querySelector(".magic-ball-input")
+const searchInput = document.querySelector(".magic-ball-input")
 
 
 openBookButton.addEventListener("click", ()=>
@@ -34,6 +34,12 @@ previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'év
     displayCardList(cardsList, indexPage.index)
 })
 
+searchInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        doCardsList(`https://api.scryfall.com/cards/search?q=${searchInput}`);
+    }
+});
+
 export {
-    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,openBookButton as homePageButton, grimoireContainer, searchinput
+    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,openBookButton as homePageButton, grimoireContainer, searchInput
 }
