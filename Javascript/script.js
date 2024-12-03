@@ -3,17 +3,16 @@ import { chooseSet, displayCardList, indexPage, cardsList } from "./cardsList.mj
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
 const rightSection = document.querySelector(".right-section")
-const rightSectionhome = document.querySelector(".right-section-homepage")
 const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
-const homePageButton = document.querySelector('.homepage-button')
+const openBookButton = document.querySelector('.openBook-button')
 const grimoireContainer = document.querySelector('.grimoire-container')
 
 
-homePageButton.addEventListener("click", ()=>
+openBookButton.addEventListener("click", ()=>
     {
     grimoireContainer.style.display = 'flex';
-    homePageButton.style.display = 'none'
+    openBookButton.style.display = 'none'
     nextPageButton.style.display = "none"
     previousPageButton.style.display = "none" 
     rightSection.innerHTML = `<article><h1>Mode d'emploi</h1> <p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
@@ -35,5 +34,5 @@ previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'év
 })
 
 export {
-    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,homePageButton, grimoireContainer
+    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,openBookButton as homePageButton, grimoireContainer
 }
