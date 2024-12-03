@@ -1,24 +1,31 @@
 import { disableNavButton, doCardsList } from "./cardsList.mjs"
 import { leftSection, rightSection } from "./script.mjs"
+import { myBookmark } from "./navButtons.mjs"
 
+const setsList = []
 
 async function doSetsList(){
-    const setsList = await getSetList()
-    displaySetsList(setsList, 1)
+    myBookmark.chapter = "sets"
+    leftSection.classList.add("left-section-set")
+    rightSection.classList.add("right-section-set")
+    await getSetList()
+    displaySetsList(setsList, 0)
 }
 
 async function getSetList(){
     const response = await fetch("https://api.scryfall.com/sets")
     const json = await response.json()
 
-    return json.data
+    for (const set of json.data){
+        setsList.push(set)
+    }
 }
 
 function displaySetsList(myList, myPage){
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
 
-    disableNavButton()
+    disableNavButton(setsList.length)
 
     myPage = myPage * 18
     for (let i = myPage; i < myPage + 9; i++){
@@ -69,5 +76,5 @@ function displaySetsList(myList, myPage){
 
 
 export {
-    doSetsList,
+    doSetsList, displaySetsList, setsList
 }
