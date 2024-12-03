@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>le Grimoire Magique</title>
-    <script defer src="script.js"></script>
+    <script async defer src="Javascript/script.mjs" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="video-container">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="Assets/Magic_ The Gathering Animated.mp4" type="video/mp4">
+    </video>
+    </div>
+        
+    <header>
+        <article class="magic-ball-container">
+            <input class="magic-ball-input" type="text" placeholder="Search here">
+        </article>
+    </header>
+    <main>
+        <input type="button" class="homepage-button" value="-"/>
+        <div class="grimoire-container" style="display: none;">
+            <button class="previous-page-button"><<<</button>
+            <div class="left-section"></div>
+            <div class="right-section"></div>
+            <button class="next-page-button">>>></button>
+        </div>
+        
+    </main>
 </body>
 </html>

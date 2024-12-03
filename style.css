@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Matrixbold ;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20vh;
+}
+
+body {
+    height: 80vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.magic-ball-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 150px;
+    width: 162px;
+    background-image: url(boulemagiquepetite.png);
+}
+
+.magic-ball-input {
+    background: none;
+    color: white;
+}
+
+.homepage-button {
+    display: flex;
+    flex-direction: row;
+    background-image: url(grimoire\ \(2\).jpg);
+    height: 560px;
+    width: 560px;
+    background-size: 560px 560px;
+    border-radius: 8px;
+}
+.grimoire-container {
+    display: flex;
+    flex-direction: row;
+    width: 1120px;
+    height: 560px;
+    background-image : url(grimoire_ouvert.jpg);
+    background-size: 1120px 560px;
+    opacity: 0.92;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+    &.left-section-set{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;  
+    }
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 10px;
+    &.right-section-set{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;  
+    }
+}
+
+.card-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    height: 260px;
+    width: 146px;
+}
+
+.card-normal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height : 90%;
+    width: 75%;
+}
+
+.card-normal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left; 
+    height : 85%;
+    width: 85%;
+    font-size: 15px;
+}
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.card-normal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height : 90%;
+    width: 75%;
+}
+
+.card-normal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left; 
+    height : 85%;
+    width: 94%;
+    font-size: 15px;
+}
+
+.next-page-button {
+    opacity :0.3;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 250px;
+    background-color: none;
+}
+
+.previous-page-button {
+    opacity :0.3;
+    border-radius: 10px;
+    height: 50px;
+    margin-top: 250px;
+    background-color: none;
+}
+
+.set-container {
+    margin-left: 50px;
+}
+
+.set-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.set-icon {
+    width: 25px;
+    height: 25px;
+}
