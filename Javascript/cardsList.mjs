@@ -1,8 +1,9 @@
-import { leftSection, rightSection } from "./script.mjs"
+import { leftSection, rightSection, searchInput, } from "./script.mjs"
 import { displayCard } from "./singleCard.mjs"
 import { disableNavButton } from "./navButtons.mjs"
 
 const cardsList = [] //liste des cartes à afficher
+
 
 const indexPage = {
     index : 0  //index de la page sur laquelle on est

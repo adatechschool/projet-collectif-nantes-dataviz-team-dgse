@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: Matrixbold ;
+    
 }
 header {
     display: flex;
@@ -54,7 +54,7 @@ main {
     width: 1120px;
     height: 560px;
     background-image : url(vieux_grimoire.JPG);
-    background-size: 1120px 560px;
+    background-size: 100% 100%;
     opacity: 0.92;
 }
 
