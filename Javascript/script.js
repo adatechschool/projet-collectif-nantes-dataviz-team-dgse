@@ -15,7 +15,7 @@ openBookButton.addEventListener("click", ()=>
     openBookButton.style.display = 'none'
     nextPageButton.style.display = "none"
     previousPageButton.style.display = "none" 
-    rightSection.innerHTML = `<article><h1>Mode d'emploi</h1> <p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
+    rightSection.innerHTML = `<article><h1>Mode d'emploi</h1><p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
                                 <p>le moteur de recherche "Boule de cristal" en haut à droite peut vous aider</p></article>`;
     leftSection.innerHTML = `<article><h1>Bienvenue dans le monde magique de </h1><h2>MAGIC THE GATHERING</h2></article>`;
     

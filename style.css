@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: Matrixbold ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-style: oblique;
 }
 header {
     display: flex;
@@ -51,10 +52,10 @@ main {
 .grimoire-container {
     display: flex;
     flex-direction: row;
-    width: 1120px;
-    height: 560px;
-    background-image : url(grimoire_ouvert.jpg);
-    background-size: 1120px 560px;
+    width: 1300px;
+    height: 650px;
+    background-image : url(vieux_grimoire.PNG);
+    background-size: 100% 100%;
     opacity: 0.92;
 }
 
@@ -75,7 +76,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 45%;
     height: 100%;
     gap: 10px;
 }
