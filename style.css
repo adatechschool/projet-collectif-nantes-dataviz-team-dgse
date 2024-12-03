@@ -163,12 +163,6 @@ main {
     background: none;
     width:50px;
     image:url('key.png'); /*chemin vers image*/
-    /*size: cover;/*couvre tous le bouton*/
-    /*repeat: no-repeat;/*pour éviter que l'image se répéte*/
-    /*color: transparent;*/
-    /*border: none;/*pas de bordure*/
-   /* cursor: pointer;/* change le curseur sur les boutton*/
-    
 }
 
 .previous-page-button {
