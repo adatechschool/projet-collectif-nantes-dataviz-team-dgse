@@ -53,6 +53,15 @@ main {
     background-size: 1120px 560px;
 }
 
+/*#image-button-next {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width: 500px;
+    height:500px;
+
+}*/
+
 .left-section {
     display: flex;
     flex-direction: row;
@@ -140,18 +149,24 @@ main {
     font-size: 15px;
 }
 .next-page-button {
-    opacity :0.3;
     border-radius: 10px;
-    height: 50px;
+    height: 132px;
     margin-top: 250px;
-    background-color: none;
+    background: none;
+    width:50px;
+    image:url('key.png'); /*chemin vers image*/
+    /*size: cover;/*couvre tous le bouton*/
+    /*repeat: no-repeat;/*pour éviter que l'image se répéte*/
+    /*color: transparent;*/
+    /*border: none;/*pas de bordure*/
+   /* cursor: pointer;/* change le curseur sur les boutton*/
+    
 }
 .previous-page-button {
-    opacity :0.3;
     border-radius: 10px;
-    height: 50px;
+    height: 132px;
     margin-top: 250px;
-    background-color: none;
-    
+    background: none;
+    width:50px;
 
 }
