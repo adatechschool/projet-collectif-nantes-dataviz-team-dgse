@@ -155,16 +155,16 @@ main {
 }
 
 .buttons-left {
-    margin-top: 81px;
+    margin-top: 105px;
     display: flex;
     flex-direction: row;
     gap: 30px;
-    width: 10%;
+    width: 4%;
     justify-content: flex-end;
 }
 
 .buttons-right {
-    margin-top: 81px;
+    margin-top: 90px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -173,17 +173,17 @@ main {
 }
 
 .home-button-container {
-    margin-top: 81px;
+    margin-top: 27px;
     display: flex;
     flex-direction: row;
     gap: 30px;
-    width: 16%;
+    width: 19%;
     justify-content: flex-end; 
 }
 
 .home-button {
-    width: 120px;
-    height: 90px;
+    width: 170px;
+    height: 160px;
     border: none;
     background-color: transparent;
 }
@@ -193,21 +193,39 @@ main {
 }
 
 .button-home-image {
-    width: 120px;
-    height: 90px;
+    width: 170px;
+    height: 160px;
     display: block;
 }
 
+.rare-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    margin-top: 18px;
+}
+
+.rare-button-image {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.rare-button:active {
+    filter : brightness(90%);
+}
+
 .colors-button {
-    width: 100px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
 }
 
 .button-colors-image {
-    width: 100px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     display: block;
 }
 
@@ -215,17 +233,48 @@ main {
     filter : brightness(90%);
 }
 
-.random-button {
-    width: 100px;
-    height: 90px;
+.set-type-button {
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
 }
 
-.random-button-image {
-    width: 100px;
-    height: 90px;
+.set-type-button:active {
+    filter : brightness(90%);
+}
+
+
+.author-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.button-author-image {
+    width: 60px;
+    height: 60px;
     display: block;
+}
+
+.author-button:active {
+    filter : brightness(90%);
+}
+
+.random-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    margin-top: 25px;
+}
+
+.random-button-image {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
 }
 
 .random-button:active {
@@ -233,15 +282,15 @@ main {
 }
 
 .set-button {
-    width: 70px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
 }
 
 .set-button-image {
-    width: 70px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     display: block;
 }
 

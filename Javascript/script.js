@@ -14,6 +14,8 @@ const setTypeButton = document.querySelector(".set-type-button")
 const authorButton = document.querySelector(".author-button")
 const homeButton = document.querySelector(".home-button")
 
+const artistList = []
+
 doCardsList("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Ablb&unique=prints")
 
 nextPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenements "clique" sur bouton suivant
@@ -28,6 +30,46 @@ previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'év
 randomButton.addEventListener("click", ()=> {
     displayCard("random")
 })
+
+authorButton.addEventListener("click",()=> {
+    displayArtists(artistList,indexPage.index)
+})
+
+async function displayArtists(myList, myPage) {
+    leftSection.innerHTML = ""
+    rightSection.innerHTML = ""
+    myPage = myPage * 12
+
+
+    const reponse = await fetch("https://api.scryfall.com/catalog/artist-names")
+    const json = await reponse.json()
+
+    for (const artist of json.data) {
+        myList.push(artist) 
+    }
+
+    for (let i = myPage; i < myPage + 6; i++) {
+
+        if (i < myList.length) {
+            const nameArtist = document.createElement("p")
+            nameArtist.innerText = myList[i]
+            nameArtist.classList.add("name-artist")
+            leftSection.appendChild(nameArtist)
+        }
+    }
+    
+    for (let i = myPage; i < myPage + 12; i++){
+        if (i < myList.length){   
+            const nameArtist = document.createElement("p")
+            nameArtist.innerText = myList[i]
+            nameArtist.classList.add("name-artist")
+            rightSection.appendChild(nameArtist)
+        }
+    }    
+    console.log(artistList)
+}
+
+
 
 export {
     grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton
