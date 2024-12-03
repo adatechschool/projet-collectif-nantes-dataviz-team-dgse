@@ -7,6 +7,7 @@ const nextPageButton = document.querySelector(".next-page-button")
 const previousPageButton = document.querySelector(".previous-page-button")
 const openBookButton = document.querySelector('.openBook-button')
 const grimoireContainer = document.querySelector('.grimoire-container')
+// const searchinput = document.querySelector(".magic-ball-input")
 
 
 openBookButton.addEventListener("click", ()=>
@@ -34,5 +35,5 @@ previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'év
 })
 
 export {
-    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,openBookButton as homePageButton, grimoireContainer
+    grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,openBookButton as homePageButton, grimoireContainer, searchinput
 }
