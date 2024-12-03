@@ -83,6 +83,7 @@ main {
     width: 50%;
     height: 100%;
     gap: 10px;
+    transform-origin: left;
     &.right-section-set{
         flex-direction: column;
         align-items: flex-start;
