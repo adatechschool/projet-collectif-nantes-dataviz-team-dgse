@@ -4,6 +4,10 @@
     border: 0;
     
 }
+
+.transition {
+    transition: 10s;
+}
 header {
     display: flex;
     flex-direction: row;
