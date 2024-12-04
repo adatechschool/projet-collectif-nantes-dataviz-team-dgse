@@ -19,6 +19,9 @@ const rareButton = document.querySelector(".rare-button")
 const colorButton = document.querySelector(".color-button")
 const authorButton = document.querySelector(".author-button")
 const homeButton = document.querySelector(".home-button")
+const header = document.querySelector("header")
+
+header.style.display = "none"
 
 homeButton.addEventListener("click", ()=> {
     rightSection.innerHTML = `<article><h1>Mode d'emploi</h1> <p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
@@ -26,11 +29,10 @@ homeButton.addEventListener("click", ()=> {
     leftSection.innerHTML = `<article><h1>Bienvenue dans le monde magique de </h1><h2>MAGIC THE GATHERING</h2></article>`;
 })
 
-
-
 openBookButton.addEventListener("click", ()=>
     {
     grimoireContainer.style.display = 'flex';
+    header.style.display = "flex"
     openBookButton.style.display = 'none' 
     rightSection.innerHTML = `<article><h1>Mode d'emploi</h1> <p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
                                 <p>le moteur de recherche "Boule de cristal" en haut à droite peut vous aider</p></article>`;
