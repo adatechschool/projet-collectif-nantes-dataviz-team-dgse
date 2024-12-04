@@ -162,7 +162,6 @@ main {
     margin-top: 250px;
     background: none;
     width:50px;
-    image:url('key.png'); /*chemin vers image*/
 }
 
 .previous-page-button {
@@ -190,5 +189,8 @@ main {
     height: 25px;
     background: none;
     width:50px;
+}
 
+.key {
+    box-shadow: 0 0 1px white, 0 0 2px white, 0 0 6px white, 0 0 12px white, inset 0 0 1px white, inset 0 0 2px white, inset 0 0 6px white, inset 0 0 12px white;
 }
