@@ -20,29 +20,32 @@ const colorButton = document.querySelector(".color-button")
 const authorButton = document.querySelector(".author-button")
 const homeButton = document.querySelector(".home-button")
 
+homeButton.addEventListener("click", ()=> {
+    rightSection.innerHTML = `<article><h1>Mode d'emploi</h1> <p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
+    <p>le moteur de recherche "Boule de cristal" en haut à droite peut vous aider</p></article>`;
+    leftSection.innerHTML = `<article><h1>Bienvenue dans le monde magique de </h1><h2>MAGIC THE GATHERING</h2></article>`;
+})
+
+
+
 openBookButton.addEventListener("click", ()=>
     {
     grimoireContainer.style.display = 'flex';
-    openBookButton.style.display = 'none'
-    // nextPageButton.style.display = "none"
-    // previousPageButton.style.display = "none" 
+    openBookButton.style.display = 'none' 
     rightSection.innerHTML = `<article><h1>Mode d'emploi</h1> <p>Afin de naviguer au mieux, vous pouvez utiliser les boutons "Set", "Couleur" et "Rareté" ci dessus.</p>
                                 <p>le moteur de recherche "Boule de cristal" en haut à droite peut vous aider</p></article>`;
-    leftSection.innerHTML = `<article><h1>Bienvenue dans le monde magique de </h1><h2>MAGIC THE GATHERING</h2></article>`;
-    doSetsList()                         
-    })
+    leftSection.innerHTML = `<article><h1>Bienvenue dans le monde magique de </h1><h2>MAGIC THE GATHERING</h2></article>`;                        
+})
 
 // Validation en appuyant sur Entrée
 searchInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         const searchTerm = searchInput.value
         performSearch(searchTerm);
-        
     }
 });
 
 function performSearch(myString) {
-    
     nextPageButton.style.display = "flex"
     previousPageButton.style.display = "flex"
     if (myString === '') {
@@ -68,8 +71,13 @@ randomButton.addEventListener("click", ()=> {
 })
 
 authorButton.addEventListener("click",()=> {
-    displayArtists(artistList,indexPage.index)
+    displayArtists(artistList,myBookmark.index)
 })
+
+setButton.addEventListener("click", ()=> {
+    doSetsList()
+})
+
 
 export {
     grimoireImage, leftSection, rightSection, nextPageButton, previousPageButton,openBookButton, grimoireContainer, searchInput

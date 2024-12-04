@@ -1,4 +1,4 @@
-import { leftSection, rightSection } from "./script.js"
+import { leftSection, rightSection } from "./script.mjs"
 const artistList = []
 
 async function displayArtists(myList, myPage) {
