@@ -6,7 +6,7 @@ import { myBookmark } from "./navButtons.mjs"
 const cardsList = [] //liste des cartes à afficher
 
 async function doCardsList(url) {
-    myBookmark.index=0
+    myBookmark.index = 0
     myBookmark.chapter = "cards"
     leftSection.classList.remove("left-section-set")
     rightSection.classList.remove("right-section-set")

@@ -1,6 +1,8 @@
 import { displayCardList, cardsList } from "./cardsList.mjs"
+import { displayArtists } from "./displayArtists.mjs"
 import { nextPageButton, previousPageButton } from "./script.mjs"
 import { displaySetsList, setsList } from "./setsList.mjs"
+import { artistList } from "./displayArtists.mjs"
 
 const myBookmark = {
     index: 0,
@@ -15,6 +17,8 @@ function switchPage(){
         case "sets":
             displaySetsList(setsList, myBookmark.index)
             break
+        case "artists":
+            displayArtists(artistList, myBookmark.index)
     }
 }
 
