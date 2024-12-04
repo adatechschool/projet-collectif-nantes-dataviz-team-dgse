@@ -7,8 +7,8 @@ async function displayArtists(myList, myPage) {
     myBookmark.chapter = "artists"
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
-    leftSection.classList.add("left-section-set")
-    rightSection.classList.add("right-section-set")
+    leftSection.classList.add("left-section-author")
+    rightSection.classList.add("right-section-author")
     myPage = myPage * 24
 
     
