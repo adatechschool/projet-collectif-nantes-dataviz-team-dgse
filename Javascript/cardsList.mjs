@@ -1,4 +1,4 @@
-import { leftSection, rightSection } from "./script.mjs"
+import { nextPageButton, previousPageButton, leftSection, rightSection } from "./script.mjs"
 import { displayCard } from "./singleCard.mjs"
 import { disableNavButton } from "./navButtons.mjs"
 import { myBookmark } from "./navButtons.mjs"
@@ -6,6 +6,7 @@ import { myBookmark } from "./navButtons.mjs"
 const cardsList = [] //liste des cartes à afficher
 
 async function doCardsList(url) {
+    myBookmark.index=0
     myBookmark.chapter = "cards"
     leftSection.classList.remove("left-section-set")
     rightSection.classList.remove("right-section-set")

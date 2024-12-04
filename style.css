@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: Matrixbold ;
+    
 }
 header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     height: 20vh;
 }
@@ -20,7 +20,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
 }
@@ -39,7 +39,7 @@ main {
     color: white;
 }
 
-.homepage-button {
+.openBook-button {
     display: flex;
     flex-direction: row;
     background-image: url(grimoire\ \(2\).jpg);
@@ -53,8 +53,8 @@ main {
     flex-direction: row;
     width: 1120px;
     height: 560px;
-    background-image : url(grimoire_ouvert.jpg);
-    background-size: 1120px 560px;
+    background-image : url(vieux_grimoire.PNG);
+    background-size: 100% 100%;
     opacity: 0.92;
 }
 
@@ -69,7 +69,7 @@ main {
     gap: 10px;
     &.left-section-set{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 30px;  
     }
 }
@@ -157,19 +157,19 @@ main {
 }
 
 .next-page-button {
-    opacity :0.3;
     border-radius: 10px;
-    height: 50px;
+    height: 132px;
     margin-top: 250px;
-    background-color: none;
+    background: none;
+    width:50px;
 }
 
 .previous-page-button {
-    opacity :0.3;
     border-radius: 10px;
-    height: 50px;
+    height: 132px;
     margin-top: 250px;
-    background-color: none;
+    background: none;
+    width:50px;
 }
 
 .set-container {
@@ -187,4 +187,143 @@ main {
 .set-icon {
     width: 25px;
     height: 25px;
+    background: none;
+    width:50px;
+}
+
+.key {
+    box-shadow: 0 0 1px white, 0 0 2px white, 0 0 6px white, 0 0 12px white, inset 0 0 1px white, inset 0 0 2px white, inset 0 0 6px white, inset 0 0 12px white;
+    background-color: none;
+}
+
+.buttons-left {
+    margin-top: 105px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 4%;
+    justify-content: flex-end;
+}
+
+.buttons-right {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 4%;
+    justify-content: flex-end;
+}
+
+.home-button-container {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 19%;
+    justify-content: flex-end; 
+}
+
+.home-button {
+    width: 170px;
+    height: 160px;
+    border: none;
+    background-color: transparent;
+}
+
+.home-button:active {
+    filter : brightness(90%);
+}
+
+.button-home-image {
+    width: 170px;
+    height: 160px;
+    display: block;
+}
+
+.rare-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    margin-top: 18px;
+}
+
+.rare-button-image {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.rare-button:active {
+    filter : brightness(90%);
+}
+
+.colors-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.button-colors-image {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.colors-button:active {
+    filter : brightness(90%);
+}
+
+.author-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.button-author-image {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.author-button:active {
+    filter : brightness(90%);
+}
+
+.random-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    margin-top: 25px;
+}
+
+.random-button-image {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
+}
+
+.random-button:active {
+    filter : brightness(90%);
+}
+
+.set-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.set-button-image {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.set-button:active {
+    filter : brightness(90%);
 }

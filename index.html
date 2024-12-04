@@ -13,21 +13,44 @@
       <source src="Assets/Magic_ The Gathering Animated.mp4" type="video/mp4">
     </video>
     </div>
-        
+
     <header>
+        <div class="home-button-container">
+            <button class="home-button" title="Home">
+                <img src="bouton-home.png" class="button-home-image"/>
+            </button>
+        </div>
+        <div class="buttons-left">
+            <button class="rare-button" title="Rare">
+                <img src="rare.png" class="rare-button-image"/>
+            </button>
+            <button class="colors-button" title="Colors">
+                <img src="colors2.png" class="button-colors-image"/>
+            </button>
+            <button class="author-button" title="Author">
+                <img src="author.png" class="button-author-image"/>
+            </button>
+        </div>
+        <div class="buttons-right">
+            <button class="random-button" title="Random">
+                <img src="random.png" class="random-button-image"/>
+            </button>
+            <button class="set-button" title="Set">
+                <img src="set.png" class="set-button-image"/>
+            </button>
+        </div>
         <article class="magic-ball-container">
-            <input class="magic-ball-input" type="text" placeholder="Search here">
-        </article>
+            <input class="magic-ball-input" type="text" placeholder="Search here" size="12">
+        </article>  
     </header>
     <main>
-        <input type="button" class="homepage-button" value="-"/>
+        <input type="button" class="openBook-button" value="-"/>
         <div class="grimoire-container" style="display: none;">
-            <button class="previous-page-button"><<<</button>
+            <button class="previous-page-button"><img class="key" src="key.png" alt="previous" width=100% height="100%"></button>
             <div class="left-section"></div>
             <div class="right-section"></div>
-            <button class="next-page-button">>>></button>
+            <button class="next-page-button"><img class="key" src="key.png" alt="next" width=100% height="100%"></button>  
         </div>
-        
     </main>
 </body>
 </html>
