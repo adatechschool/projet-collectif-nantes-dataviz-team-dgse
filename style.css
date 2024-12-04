@@ -54,7 +54,7 @@ main {
     width: 1120px;
     height: 560px;
     background-image : url(grimoire_ouvert.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     opacity: 0.92;
 }
 
