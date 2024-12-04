@@ -1,14 +1,17 @@
 import { leftSection, rightSection } from "./script.mjs"
+import { myBookmark } from "./navButtons.mjs"
 const artistList = []
 
 async function displayArtists(myList, myPage) {
+    artistList.length = 0
+    myBookmark.chapter = "artists"
     leftSection.innerHTML = ""
     rightSection.innerHTML = ""
     leftSection.classList.add("left-section-set")
     rightSection.classList.add("right-section-set")
     myPage = myPage * 24
 
-
+    
     const reponse = await fetch("https://api.scryfall.com/catalog/artist-names")
     const json = await reponse.json()
 

@@ -5,6 +5,7 @@ import { myBookmark } from "./navButtons.mjs"
 const setsList = []
 
 async function doSetsList(){
+    myBookmark.index = 0
     myBookmark.chapter = "sets"
     leftSection.classList.add("left-section-set")
     rightSection.classList.add("right-section-set")
