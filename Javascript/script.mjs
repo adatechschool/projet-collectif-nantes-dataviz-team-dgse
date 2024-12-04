@@ -1,6 +1,8 @@
 import { doCardsList, displayCardList, cardsList } from "./cardsList.mjs"
 import { doSetsList } from "./setsList.mjs"
 import { myBookmark, switchPage } from "./navButtons.mjs"
+import { displayCard } from "./singleCard.mjs"
+import { displayArtists, artistList } from "./displayArtists.mjs"
 
 const grimoireImage = document.querySelector(".grimoire-image")
 const leftSection = document.querySelector(".left-section")
@@ -11,6 +13,12 @@ const previousPageButton = document.querySelector(".previous-page-button")
 const openBookButton = document.querySelector('.openBook-button')
 const grimoireContainer = document.querySelector('.grimoire-container')
 const searchInput = document.querySelector(".magic-ball-input")
+const randomButton = document.querySelector(".random-button")
+const setButton = document.querySelector(".set-button")
+const rareButton = document.querySelector(".rare-button")
+const colorButton = document.querySelector(".color-button")
+const authorButton = document.querySelector(".author-button")
+const homeButton = document.querySelector(".home-button")
 
 openBookButton.addEventListener("click", ()=>
     {
@@ -23,10 +31,6 @@ openBookButton.addEventListener("click", ()=>
     leftSection.innerHTML = `<article><h1>Bienvenue dans le monde magique de </h1><h2>MAGIC THE GATHERING</h2></article>`;
     doSetsList()                         
     })
-
-//chooseSet()
-
-// doCardsList("https://api.scryfall.com/cards/search?include_extras=true&include_variations=true&order=set&q=e%3Amid&unique=prints")
 
 // Validation en appuyant sur Entrée
 searchInput.addEventListener('keypress', function(event) {
@@ -50,8 +54,6 @@ function performSearch(myString) {
         doCardsList(url);   
 }
 
-
-
 nextPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenements "clique" sur bouton suivant
     myBookmark.index ++
     switchPage()
@@ -59,6 +61,14 @@ nextPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenem
 previousPageButton.addEventListener("click", ()=> { // ajoute un écouteur d'évenements "clique" sur bouton précédent
     myBookmark.index --
     switchPage()
+})
+
+randomButton.addEventListener("click", ()=> {
+    displayCard("random")
+})
+
+authorButton.addEventListener("click",()=> {
+    displayArtists(artistList,indexPage.index)
 })
 
 export {
