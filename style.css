@@ -31,7 +31,7 @@ main {
     align-items: center;
     height: 150px;
     width: 162px;
-    background-image: url(/Assets/boulemagiquepetite.png);
+    background-image: url(Assets/boulemagiquepetite.png);
 }
 
 .magic-ball-input {
