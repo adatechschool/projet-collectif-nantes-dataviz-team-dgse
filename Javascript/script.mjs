@@ -47,6 +47,11 @@ searchInput.addEventListener('keypress', function(event) {
     }
 });
 
+function changeVideo(){
+    document.getElementById("background-video").load();
+    document.getElementById("player").src = "projet-collectif-nantes-dataviz-team-dgse/Assets/background.mp4";
+}
+
 function performSearch(myString) {
     nextPageButton.style.display = "flex"
     previousPageButton.style.display = "flex"
